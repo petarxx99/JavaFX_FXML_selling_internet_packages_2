@@ -1,0 +1,16 @@
+
+.toggle-button:hover{
+      -fx-border-width: 3px;
+      -fx-border-color: yellow;
+}
+
+.button:hover{
+       -fx-border-width: 3px;
+        -fx-border-color: yellow;
+}
+
+#saveButton:hover{
+    -fx-background-color: blue;
+}
+
+
