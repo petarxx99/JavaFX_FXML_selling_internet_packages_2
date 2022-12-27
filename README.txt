@@ -8,4 +8,4 @@ is cleaner than the code in the first version (at least I think so).
 Also, I removed the responsibility of the class InternetPackage of saving itself, now controller class
 is responsible for it. Maybe I will add in the future the option for permanent storage in this version
 of the project as well, since I am more pleased with the design that I did in this project.
-If I add the option for permanent storage, I will probably make anotehr class to deal with that, we will see.
+If I add the option for permanent storage, I will probably make another class to deal with that, we will see.
