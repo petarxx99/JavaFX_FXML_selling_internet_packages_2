@@ -120,11 +120,15 @@ public class ProdajaInternetPaketa {
             userInput.setContractDurationInMonths(NEW_CONTRACT_DURATION_IN_MONTHS);
         }
     }
-    
+
+    public static <T> ObservableList<T> copyList(ObservableList<T> observableList){
+        return observableList.stream().
+                collect(Collectors.toCollection(FXCollections::<T>observableArrayList));
+    }
 
     @FXML
     private void seeSavedPackages(){
-        ObservableList<InternetPackage> copyOfSavedPackages = Util.copyList(savedPackages);
+        ObservableList<InternetPackage> copyOfSavedPackages = copyList(savedPackages);
         packagesDisplayer.displayInternetPackages(copyOfSavedPackages, this, messageDisplayer);
     }
 

@@ -31,9 +31,5 @@ public class Util {
         return list.size() == 0;
     }
 
-    public static <T> ObservableList<T> copyList(ObservableList<T> observableList){
-        return observableList.stream().
-                collect(Collectors.toCollection(FXCollections::<T>observableArrayList));
-    }
 
 }
