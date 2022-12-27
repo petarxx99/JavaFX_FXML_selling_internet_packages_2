@@ -12,6 +12,10 @@ public class Util {
         return !string.isBlank();
     }
 
+    public static boolean stringIsEitherNullOrBlank(String string){
+        if(string == null) return true;
+        return string.isBlank();
+    }
     public static boolean trimmedStringsAreEqual(String string1, String string2){
         if(string1 == string2) return true;
         if(string1 == null || string2 == null) return false;

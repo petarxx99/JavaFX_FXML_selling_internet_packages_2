@@ -19,7 +19,7 @@ public class InternetPackage {
         reset();
     }
 
-    private InternetPackage(String firstName, String lastName, String address,
+    public InternetPackage(String firstName, String lastName, String address,
                             int internetSpeedInMBPS, Bandwidth bandwidth, int contractDurationInMonths) {
         setFirstName(firstName);
         setLastName(lastName);
@@ -164,13 +164,13 @@ public class InternetPackage {
     }
 
     public ValidOrInvalidData isValid() {
-        if (!Util.stringIsntNullNorBlank(getFirstName())) {
+        if (Util.stringIsEitherNullOrBlank(getFirstName())) {
             return new ValidOrInvalidData(false, "First name is invalid.");
         }
-        if (!Util.stringIsntNullNorBlank(getLastName())) {
+        if (Util.stringIsEitherNullOrBlank(getLastName())) {
             return new ValidOrInvalidData(false, "Last name is invalid.");
         }
-        if (!Util.stringIsntNullNorBlank(getAddress())) {
+        if (Util.stringIsEitherNullOrBlank(getAddress())) {
             return new ValidOrInvalidData(false, "Address is invalid.");
         }
         if (getInternetSpeedInMegabytesPerSecond() == INVALID_INTERNET_SPEED) {
