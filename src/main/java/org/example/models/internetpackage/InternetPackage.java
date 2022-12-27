@@ -188,13 +188,13 @@ public class InternetPackage {
 
 
     public boolean matchesThisValidPackage(InternetPackage validPackage) {
-        if(!getFirstName().isBlank()){
+        if(Util.stringIsntNullNorBlank(getFirstName())){
             if(Util.trimmedStringsAreNOTEqual(getFirstName(), validPackage.getFirstName())) return false;
         }
-        if(!getLastName().isBlank()){
+        if(Util.stringIsntNullNorBlank(getLastName())){
             if(Util.trimmedStringsAreNOTEqual(getLastName(), validPackage.getLastName())) return false;
         }
-        if(!getAddress().isBlank()){
+        if(Util.stringIsntNullNorBlank(getAddress())){
             if(Util.trimmedStringsAreNOTEqual(getAddress(), validPackage.getAddress())) return false;
         }
 

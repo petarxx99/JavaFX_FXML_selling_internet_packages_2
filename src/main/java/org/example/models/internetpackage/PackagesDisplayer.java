@@ -52,8 +52,8 @@ public class PackagesDisplayer {
         scrollPane.setFitToWidth(true);
 
         Button deleteButton = new Button("delete selected package");
-        ObservableList<InternetPackage> deletedItems = FXCollections.<InternetPackage>observableArrayList();
-        deleteButton.setOnAction(actionEvent -> deleteFromTableView(tableView, packages, deletedItems, messenger));
+        ObservableList<InternetPackage> deletedPackages = FXCollections.<InternetPackage>observableArrayList();
+        deleteButton.setOnAction(actionEvent -> deleteFromTableView(tableView, packages, deletedPackages, messenger));
         deleteButton.setStyle(".button:hover{-fx-background-color:red;}");
 
         VBox root = new VBox();
@@ -65,7 +65,7 @@ public class PackagesDisplayer {
         Stage stage = new Stage();
         stage.initModality(Modality.APPLICATION_MODAL); /* Da ne mogu istovremeno da se otvore nekoliko prozora i brisu paketi na nekoliko mesta.*/
         stage.setScene(scene);
-        stage.setOnCloseRequest(windowEvent -> prodajaInternetPaketa.anotherWindowDeletedPackages(deletedItems));
+        stage.setOnCloseRequest(windowEvent -> prodajaInternetPaketa.anotherWindowDeletedPackages(deletedPackages));
         stage.show();
     }
 
