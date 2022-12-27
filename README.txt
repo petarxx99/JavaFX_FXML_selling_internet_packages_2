@@ -9,3 +9,6 @@ Also, I removed the responsibility of the class InternetPackage of saving itself
 is responsible for it. Maybe I will add in the future the option for permanent storage in this version
 of the project as well, since I am more pleased with the design that I did in this project.
 If I add the option for permanent storage, I will probably make another class to deal with that, we will see.
+Here is the link to the previous version of the project:
+https://github.com/petarxx99/JavaFX_selling_internet_packages
+
